@@ -1,0 +1,88 @@
+<!-- blue banner -->
+<div class="container-fluid">
+  <div class="row">
+      <div class="bg-info py-5">
+          <div class="container">
+              <div class="row">
+                  <h1 class="text-light"><span class="fw-lighter"><i class="fa-solid fa-chart-line"></i></span> Dashboard</h1>
+                  <nav aria-label="breadcrumb">
+                      <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a routerLink="/partner/dashboard"><i style="color: #000;" class="fa-solid fa-home"></i></a></li>
+                          <li class="breadcrumb-item active">Profile</li>
+                      </ol>
+                  </nav>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="container">
+  <!--profile view-->
+  <div class="row my-3 d-flex justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header bg-light d-flex justify-content-center">
+          <h1>Profile</h1>
+        </div>
+        <!-- view profile -->
+        <div class="card-body d-flex justify-content-center">
+          <form>
+            <!-- <div class="mb-3 col-md-6 col-12">
+                <img
+                  [src]="profile.image"
+                  alt=""
+                  height="300px"
+                  width="300px"
+                  class="img-fluid"
+                />
+              </div> -->
+            <div class="mb-3 col-md-12">
+              <label for="p_name" class="form-label">Partner Name </label>
+              <span>:{{ profile.name }}</span>
+            </div>
+            <div class="mb-3 col-md-12">
+              <label for="username" class="form-label">Username </label>
+              <span>:{{ profile.uname }}</span>
+            </div>
+            <div class="mb-3 col-md-12">
+              <label for="id" class="form-label">Partner Id </label>
+              <span>:{{ profile.partner_id }}</span>
+            </div>
+            <div class="mb-3 col-md-12">
+              <label for="email" class="form-label">Email Id </label>
+              <span>:{{ profile.email }}</span>
+            </div>
+            <div class="mb-3 col-md-12">
+              <label for="pan" class="form-label">Pan Number </label>
+              <span>:{{ profile.pan }}</span>
+            </div>
+            <div class="mb-3 col-md-12">
+              <label for="phno" class="form-label">Phone Number </label>
+              <span>:{{ profile.phoneNo }}</span>
+            </div>
+            <div class="mb-3 col-md-12">
+              <label for="company" class="form-label">Comapany Name :</label>
+              <span>:{{ profile.company }}</span>
+            </div>
+            <div class="col-md-12 mt-3 d-flex justify-content-center">
+              <button
+                class="btn btn-lg btn-primary mr-3"
+                (click)="editProfView()"
+              >
+                Edit
+              </button>
+              <!-- <button
+                class="btn btn-lg btn-light"
+                routerLink="/partner/dashboard"
+              >
+                Back
+              </button> -->
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- profile view end -->
+    </div>
+  </div>
+</div>
