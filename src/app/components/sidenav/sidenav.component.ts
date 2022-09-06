@@ -8,9 +8,9 @@ interface SideNavToggle {
 }
 
 @Component({
-  selector: 'app-admin-sidenav',
-  templateUrl: './admin-sidenav.component.html',
-  styleUrls: ['./admin-sidenav.component.css'],
+  selector: 'app-sidenav',
+  templateUrl: './sidenav.component.html',
+  styleUrls: ['./sidenav.component.css'],
   animations: [
     trigger('fadeInOut', [
       transition(':enter', [
@@ -38,14 +38,20 @@ interface SideNavToggle {
     ])
   ]
 })
-export class AdminSidenavComponent implements OnInit {
+export class SidenavComponent implements OnInit {
 
-  constructor() { }
+  user:any;
+
+  constructor() {}
 
   @Output() onToggleSideNav: EventEmitter<SideNavToggle> = new EventEmitter();
   collapsed = false;
   screenWidth = 0;
-  navData = navbarData;
+  navData=navbarData;
+
+  ngOnInit(): void {
+    this.screenWidth = window.innerWidth;
+  }
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
@@ -54,10 +60,6 @@ export class AdminSidenavComponent implements OnInit {
       this.collapsed = false;
       this.onToggleSideNav.emit({collapsed: this.collapsed, screenWidth: this.screenWidth});
     }
-  }
-
-  ngOnInit(): void {
-      this.screenWidth = window.innerWidth;
   }
 
   toggleCollapse(): void {

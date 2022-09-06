@@ -41,10 +41,11 @@ import { PartnerEachWorkorderComponent } from './components/partnerPage/partner-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PartnerEditProfileComponent } from './components/partnerPage/partner-edit-profile/partner-edit-profile.component';
 import { AdminApvPartnerComponent } from './components/adminPage/admin-apv-partner/admin-apv-partner.component';
-import { AdminSidenavComponent } from './components/sidenav/admin-sidenav/admin-sidenav.component';
-import { FinanceSidenavComponent } from './components/sidenav/finance-sidenav/finance-sidenav.component';
-import { PartnerSidenavComponent } from './components/sidenav/partner-sidenav/partner-sidenav.component';
 import { BodyComponent } from './components/body/body.component';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { AdminSidenavComponent } from './components/sidena/admin-sidenav/admin-sidenav.component';
+import { FinanceSidenavComponent } from './components/sidena/finance-sidenav/finance-sidenav.component';
+import { PartnerSidenavComponent } from './components/sidena/partner-sidenav/partner-sidenav.component';
 
 @NgModule({
   declarations: [
@@ -75,10 +76,11 @@ import { BodyComponent } from './components/body/body.component';
     PartnerEachWorkorderComponent,
     PartnerEditProfileComponent,
     AdminApvPartnerComponent,
+    BodyComponent,
+    SidenavComponent,
     AdminSidenavComponent,
     FinanceSidenavComponent,
     PartnerSidenavComponent,
-    BodyComponent,
   ],
   imports: [
     BrowserModule,

@@ -20,5 +20,7 @@ export class AppComponent {
     this.screenWidth = data.screenWidth;
     this.isSideNavCollapsed = data.collapsed;
   }
+  token=localStorage.getItem("token");
+  role=localStorage.getItem("role");
 
 }

@@ -1,6 +1,8 @@
-<app-admin-sidenav (onToggleSideNav)="onToggleSideNav($event)"></app-admin-sidenav>
+<app-sidenav *ngIf="token==null && role==null" (onToggleSideNav)="onToggleSideNav($event)"></app-sidenav>
+<app-admin-sidenav *ngIf="role==='Admin'" (onToggleSideNav)="onToggleSideNav($event)"></app-admin-sidenav>
+<app-finance-sidenav *ngIf="role==='Finance'" (onToggleSideNav)="onToggleSideNav($event)"></app-finance-sidenav>
+<app-partner-sidenav *ngIf="role==='Partner'" (onToggleSideNav)="onToggleSideNav($event)"></app-partner-sidenav>
 <app-body
     [collapsed]="isSideNavCollapsed"
     [screenWidth]="screenWidth"
 ></app-body>
-<!-- <app-footer></app-footer> -->
